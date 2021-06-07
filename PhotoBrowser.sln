@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31321.278
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhotoBrowser", "PhotoBrowser\PhotoBrowser.csproj", "{E0C73D00-EFCA-4ADB-BD57-870325C466C1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PhotoBrowser", "PhotoBrowser\PhotoBrowser.csproj", "{E0C73D00-EFCA-4ADB-BD57-870325C466C1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhotoBrowser.BusinessLogic", "PhotoBrowser.BusinessLogic\PhotoBrowser.BusinessLogic.csproj", "{B84B463E-43A3-430B-B6D5-1974B4001CFB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{E0C73D00-EFCA-4ADB-BD57-870325C466C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E0C73D00-EFCA-4ADB-BD57-870325C466C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E0C73D00-EFCA-4ADB-BD57-870325C466C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B84B463E-43A3-430B-B6D5-1974B4001CFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B84B463E-43A3-430B-B6D5-1974B4001CFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B84B463E-43A3-430B-B6D5-1974B4001CFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B84B463E-43A3-430B-B6D5-1974B4001CFB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

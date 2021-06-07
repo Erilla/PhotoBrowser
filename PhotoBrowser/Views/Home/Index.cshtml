@@ -1,8 +1,31 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
+    var route = new Dictionary<string, string>();
+    route.Add("pageSize", Model.PageSize.ToString());
 }
+@model IndexModel
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    @foreach (var photo in Model.PhotosPanelModelList)
+    {
+        @await Html.PartialAsync("_PhotoPanel", photo)
+    }
+</div>
+
+@using (Html.BeginForm("Index", "Home"))
+{   
+    <div id="container" style="margin-left: 20px">
+        <div>
+            Items per page @Html.TextBoxFor(m => m.PageSize, "{0:G}")
+        </div>
+    </div>
+}
+
+<div class="pagination" style="margin-left: 400px">
+    <div style="padding: 10px">
+        Page @(Model.PhotosPanelModelList.PageCount < Model.PhotosPanelModelList.PageNumber ? 0 : Model.PhotosPanelModelList.PageNumber)
+        of @Model.PhotosPanelModelList.PageCount
+    </div>
+
+    <pager class="pager-container" asp-all-route-data="route" list="@Model.PhotosPanelModelList" asp-action="Index" asp-controller="Home"></pager>
 </div>
